@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import FilterSection from "./components/FilterSection";
+import ShowAPIs from "./components/ShowAPIs";
+import TopSection from "./components/TopSection";
+import useAxios from "./hooks/useAxios";
+import { useEffect } from "react";
 
 function App() {
+  const { fetchData, response, loading } = useAxios("/entries");
+
+  useEffect(() => {
+    fetchData({ params: { category: "Animals" } });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TopSection fetchData={fetchData} />
+      <div className="container mx-auto max-w-4xl">
+        <FilterSection />
+        <ShowAPIs response={response} loading={loading} />
+      </div>
     </div>
   );
 }
