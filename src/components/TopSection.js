@@ -15,13 +15,15 @@ const TopSection = ({ fetchData }) => {
 
   return (
     <div
-      className="px-12  text-center  relative overflow-hidden h-[400px]  bg-no-repeat bg-cover "
+      className="px-12  text-center  relative overflow-hidden h-[200px] sm:h-[400px]  bg-no-repeat bg-cover "
       style={{ backgroundImage: `url(${bg2})` }}
     >
-      <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed">
-        <div class="flex justify-center items-center h-full">
+      <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed">
+        <div className="flex justify-center items-center h-full">
           <div>
-            <h2 class="font-semibold text-white text-4xl mb-4">Search APIs</h2>
+            <h2 className="font-semibold text-white text-4xl mb-4">
+              Search APIs
+            </h2>
             <div className="flex items-center bg-white mx-auto mt-6 max-w-md rounded-md">
               <input
                 type="search"

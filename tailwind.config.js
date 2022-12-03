@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ourple: "#ce3df3",
+        ourple: "#22A39F",
         blake: "#0e1217",
       },
     },
