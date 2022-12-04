@@ -4,7 +4,13 @@ import TopSection from "./components/TopSection";
 import useAxios from "./hooks/useAxios";
 import { useEffect } from "react";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function App() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const { fetchData, response, loading } = useAxios("entries");
 
   useEffect(() => {

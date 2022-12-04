@@ -9,7 +9,7 @@ const Card = ({ api }) => {
   );
 
   return (
-    <a href={api.Link} target="_blank" rel="noreferrer">
+    <a href={api.Link} data-aos="fade-up" target="_blank" rel="noreferrer">
       <div className="border-2 shadow-md pb-2  border-ourple  text-gray-600 rounded-md bg-blake hover:bg-gray-800/50 cursor-pointer h-full">
         <p className=" w-full bg-gray-800/50 flex justify-center text-2xl p-2 rounded-md">
           <span className="font-semibold text-gray-300">{api.API}</span>

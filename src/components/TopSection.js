@@ -21,16 +21,20 @@ const TopSection = ({ fetchData }) => {
 
   return (
     <div
-      className="px-12  text-center  relative overflow-hidden h-[200px] sm:h-[400px]  bg-no-repeat bg-cover "
+      className="px-12  text-center  relative overflow-hidden h-[200px] sm:h-[300px]  bg-no-repeat bg-cover "
       style={{ backgroundImage: `url(${bg2})` }}
     >
-      <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed">
-        <div className="flex justify-center items-center h-full">
+      <div
+        className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed "
+        data-aos="zoom-in"
+      >
+        <div className="flex  flex-col justify-around items-center h-full ">
+          <h2 className="font-bold text-2xl md:text-6xl m-4 border-2 border-ourple text-ourple bg-gray-800/50 rounded-md px-4 py-2">
+            API Hunt
+          </h2>
           <div>
-            <h2 className="font-semibold text-white text-4xl mb-4">
-              Search APIs
-            </h2>
-            <div className="flex items-center bg-white mx-auto mt-6 max-w-md rounded-md">
+            <h2 className="font-semibold text-white text-2xl ">Search APIs</h2>
+            <div className="flex items-center bg-white mx-auto mt-2 mb-6 max-w-md rounded-md">
               <input
                 type="search"
                 className="w-full px-4 py-2 rounded-md focus:outline-none"
