@@ -35,7 +35,7 @@ const FilterSection = ({ fetchData: fetchApi }) => {
       <h3 className=" p-4 mb-4 text-center font-semibold text-xl text-slate-300 w-full bg-gray-800/50 ">
         Categories
       </h3>
-      <div className="text-center m-5 " data-aos="fade-up">
+      <div className="text-center m-5 " data-aos="zoom-in">
         {categories &&
           categories.map((button) => (
             <button
