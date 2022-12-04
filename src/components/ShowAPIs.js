@@ -8,7 +8,7 @@ const ShowAPIs = ({ response, loading }) => {
         {[...Array(5).keys()].map((num) => (
           <div
             key={num}
-            className="h-28 w-full bg-gray-300 m-1 rounded-sm"
+            className="h-28 w-full bg-gray-600 m-1 rounded-sm"
           ></div>
         ))}
       </div>
@@ -29,7 +29,7 @@ const ShowAPIs = ({ response, loading }) => {
         APIs
       </h3>
       <div className=" mx-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {response &&
+        {response.entries &&
           response.entries.map((api, index) => <Card api={api} key={index} />)}
       </div>
     </div>

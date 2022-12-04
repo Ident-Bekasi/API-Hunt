@@ -12,6 +12,12 @@ const TopSection = ({ fetchData }) => {
       setValue("");
     }
   };
+  const handleButton = () => {
+    if (value.length) {
+      fetchData({ params: { title: value } });
+      setValue("");
+    }
+  };
 
   return (
     <div
@@ -33,7 +39,10 @@ const TopSection = ({ fetchData }) => {
                 onChange={(e) => setValue(e.target.value)}
                 onKeyDown={handlePress}
               />
-              <button className="bg-ourple text-white px-4 py-2 rounded-r-md">
+              <button
+                className="bg-ourple text-white px-4 py-2 rounded-r-md"
+                onClick={handleButton}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

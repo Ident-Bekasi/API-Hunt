@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import useAxios from "../hooks/useAxios";
 
-const FilterSection = () => {
+const FilterSection = ({ fetchData: fetchApi }) => {
   const {
     fetchData,
     response: { categories },
     loading,
-  } = useAxios("/categories");
+  } = useAxios("categories");
 
   useEffect(() => {
     fetchData();
@@ -26,6 +26,10 @@ const FilterSection = () => {
     );
   }
 
+  const handleFilter = (e) => {
+    fetchApi({ params: { category: e.target.value } });
+  };
+
   return (
     <div>
       <h3 className=" p-4 mb-4 text-center font-semibold text-xl text-slate-300 w-full bg-gray-800/50 ">
@@ -34,7 +38,11 @@ const FilterSection = () => {
       <div className="text-center m-5">
         {categories &&
           categories.map((button) => (
-            <button className=" px-4 py-1 m-1 border-2 border-ourple text-ourple bg-gray-800/50 rounded-md hover:bg-gray-700/50 hover:text-white focus:outline-none focus:ring-2 transition duration-150 ease-in-out">
+            <button
+              className=" px-4 py-1 m-1 border-2 border-ourple text-ourple bg-gray-800/50 rounded-md hover:bg-gray-700/50 hover:text-white focus:outline-none focus:ring-2 transition duration-150 ease-in-out"
+              onClick={handleFilter}
+              value={button}
+            >
               {button}
             </button>
           ))}

@@ -9,7 +9,10 @@ const useAxios = (query) => {
   const fetchData = async (params) => {
     try {
       setLoading(true);
-      const res = await axios.get(`https://api.publicapis.org${query}`, params);
+      const res = await axios.get(
+        `https://api.publicapis.org/${query}`,
+        params
+      );
       setResponse(res.data);
     } catch (error) {
       setError(error);
