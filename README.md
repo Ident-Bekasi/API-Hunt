@@ -1,3 +1,4 @@
+Checkout this project live at: https://harshja1n.github.io/API-Hunt/
 # API HUNT
 This website provides a user-friendly interface that allows users to easily browse the different categories of APIs from public-api API and view details about each API. It also provides a search bar and filters that allow users to quickly find the APIs they are looking for.
 
