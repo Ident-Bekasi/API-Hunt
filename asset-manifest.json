@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/API-Hunt/static/css/main.cdcea9a6.css",
+    "main.js": "/API-Hunt/static/js/main.14f32dd9.js",
+    "index.html": "/API-Hunt/index.html",
+    "main.cdcea9a6.css.map": "/API-Hunt/static/css/main.cdcea9a6.css.map",
+    "main.14f32dd9.js.map": "/API-Hunt/static/js/main.14f32dd9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cdcea9a6.css",
+    "static/js/main.14f32dd9.js"
+  ]
+}
