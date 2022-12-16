@@ -6,7 +6,7 @@ This website provides a user-friendly interface that allows users to easily brow
 ![apigif4](https://user-images.githubusercontent.com/96345745/205686496-52ab698a-c229-4bf4-a355-94ea1c7f47fc.gif)
 
 ### Process
-- I have built the website using React Framework and styled it using Tailwind CSS.
+- I have built the website using React  and styled it using Tailwind CSS.
 - I am fetching data of freely available, open access APIs from public-api Api.
 <hr/>
 
